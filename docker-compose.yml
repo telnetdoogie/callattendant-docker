@@ -1,0 +1,12 @@
+services:
+
+  callattendant:
+    container_name: callattendant
+    image: telnetdoogie/callattendant-docker:latest
+    devices:
+      - /dev/ttyACM0    # add your modem dev path here
+    volumes:
+      - /volume1/docker/callattendant/config:/app/config:rw
+    ports:
+      - 8088:5000
+    restart: unless-stopped
