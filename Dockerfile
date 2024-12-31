@@ -3,7 +3,7 @@ FROM python:3.13.1-alpine3.21 as builder
 WORKDIR /app
 
 RUN apk add git
-RUN pip install --no-cache-dir --prefix=/install callattendant@git+https://github.com/thess/callattendant@v2.0.6
+RUN pip install --no-cache-dir --prefix=/install callattendant@git+https://github.com/thess/callattendant@v2.0.7
 
 FROM python:3.13.1-alpine3.21
 
