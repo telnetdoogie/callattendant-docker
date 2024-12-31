@@ -2,5 +2,35 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "Dockerfile$"
+      ],
+      "matchStrings": [
+        "RUN pip install --no-cache-dir --prefix=/install callattendant@git\\+https://github.com/thess/callattendant@v(?<currentValue>[0-9]+\\.[0-9]+\\.[0-9]+)"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "thess/callattendant"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "github-releases"
+      ],
+      "matchDepNames": [
+        "thess/callattendant"
+      ]
+    },
+    {
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "dependencyDashboardApproval": true
+    }
   ]
 }
+
