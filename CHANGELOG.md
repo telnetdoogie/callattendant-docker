@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.0.1...v1.1.0) (2024-12-31)
+
+
+### Features
+
+* renovate - stay up to date with thess version ([a77426c](https://github.com/telnetdoogie/callattendant-docker/commit/a77426c68c4b2b953d09b3d1a1ef8f382b1bede0))
+
+
+
 ## [1.0.1](https://github.com/telnetdoogie/callattendant-docker/compare/v0.1.0...v1.0.1) (2024-12-31)
 
 
