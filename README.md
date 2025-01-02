@@ -17,7 +17,7 @@ The container listens on port 5000. Choose any open port to map to the container
 ```
 docker run --rm -it --device=/dev/ttyACM0 \
     -v /volume1/docker/callattendant-docker/config:/app/config \
-    -p 9991:5000 \
+    -p 8088:5000 \
     telnetdoogie/callattendant-docker:latest
 ```
 
