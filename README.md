@@ -1,6 +1,6 @@
 # **CallAttendant-Docker**
 
-This is a dockerized version of [@thess](https://github.com/thess)'s [CallAttendant](https://github.com/thess/callattendant/).
+This is a dockerized version of [@thess](https://github.com/thess)'s [CallAttendant](https://github.com/thess/callattendant/) that should run on any arm64 or amd64 docker host.
 
 You'll need to know which device is being used as your modem, and will need to add it to `--device` (docker run) or `devices:` (compose).
 
@@ -39,6 +39,7 @@ services:
 ```
 
 ### Synology NAS users:
+#### (just for my synology fam that might want to get this working with a USB modem on that platform)
 
 I am using this on a Synology NAS with a **StarTech.com USB 2.0 Fax Modem** that I picked up from Amazon. Should work with other Conexant USB modems. After installing the SynoCommunity Package [USBSerial](https://synocommunity.com/package/synokernel-usbserial) I run the following script on bootup as root (I don't think they're all needed but I load them all anyway based on [MariusHosting's USB Drivers article](https://mariushosting.com/synology-how-to-add-usb-support-on-dsm-7/) )
 
