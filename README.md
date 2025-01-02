@@ -43,7 +43,7 @@ services:
 
 I am using this on a Synology NAS with a **StarTech.com USB 2.0 Fax Modem** that I picked up from Amazon. Should work with other Conexant USB modems. After installing the SynoCommunity Package [USBSerial](https://synocommunity.com/package/synokernel-usbserial) I run the following script on bootup as root (I don't think they're all needed but I load them all anyway based on [MariusHosting's USB Drivers article](https://mariushosting.com/synology-how-to-add-usb-support-on-dsm-7/) )
 
-Using this specific USB Modem on my Synology DS218+, my device (as in the compose above) shows up as `/dev/ttyACM0`
+Using the above modem on my Synology DS218+, my device (as in the compose above) shows up as `/dev/ttyACM0`. My example below and compose / docker run above use that device address as the example.
 
 ```bash
 #!/bin/sh
