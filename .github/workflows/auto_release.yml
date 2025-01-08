@@ -12,10 +12,10 @@ jobs:
       ACTIONS_STEP_DEBUG: true
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Checkout our working repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4 # Checkout our working repository
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v6
+        uses: TriPSs/conventional-changelog-action@67139193614f5b9e8db87da1bd4240922b34d765 # v6
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           output-file: 'CHANGELOG.md'
@@ -27,7 +27,7 @@ jobs:
           echo "Clean Changelog: ${{ steps.changelog.outputs.clean_changelog }}"
           echo "Outputs Skipped: ${{ steps.changelog.outputs.skipped }}"
       - name: Create Release # This action will create the actual release
-        uses: actions/create-release@v1
+        uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
