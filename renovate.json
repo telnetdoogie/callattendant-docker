@@ -26,15 +26,21 @@
       ]
     },
     {
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchPackageNames": [
-        "*"
+      "groupName": "all dependencies",
+      "groupSlug": "all",
+      "lockFileMaintenance": {
+        "enabled": false
+      },
+      "packageRules": [
+        {
+          "groupName": "all dependencies",
+          "groupSlug": "all",
+          "matchPackageNames": [
+            "*"
+          ]
+        }
       ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]
+      "separateMajorMinor": false
     }
   ]
 }
