@@ -1,7 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "group:allNonMajor",
+    "helpers:pinGitHubActionDigests"
   ],
   "customManagers": [
     {
@@ -23,17 +25,6 @@
       ],
       "matchDepNames": [
         "thess/callattendant"
-      ]
-    },
-    {
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchPackageNames": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
       ]
     }
   ]
