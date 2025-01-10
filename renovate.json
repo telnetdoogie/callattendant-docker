@@ -25,7 +25,8 @@
       ],
       "matchDepNames": [
         "thess/callattendant"
-      ]
+      ],
+      "commitMessagePrefix": "feat:"
     }
   ]
 }
