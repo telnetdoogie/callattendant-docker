@@ -1,3 +1,12 @@
+## [1.5.2](https://github.com/telnetdoogie/callattendant-docker/compare/v1.5.1...v1.5.2) (2025-02-14)
+
+
+### Bug Fixes
+
+* **ci:** modify check for develop branch ([64989a3](https://github.com/telnetdoogie/callattendant-docker/commit/64989a34d7679863aae78f0df3c86702229cea25))
+
+
+
 ## [1.5.1](https://github.com/telnetdoogie/callattendant-docker/compare/v1.4.2...v1.5.1) (2025-02-14)
 
 
@@ -32,15 +41,6 @@
 ### Features
 
 * Modify Dockerfile for armv7 version ([68e8449](https://github.com/telnetdoogie/callattendant-docker/commit/68e84495584deeb8dfb1499a571a135c60cce7c3))
-
-
-
-# [1.3.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.2.0...v1.3.0) (2025-02-14)
-
-
-### Features
-
-* Add armv7 version ([17b3f0d](https://github.com/telnetdoogie/callattendant-docker/commit/17b3f0d1efafa30b0a79a62eb7ac0d286f1b52eb))
 
 
 
