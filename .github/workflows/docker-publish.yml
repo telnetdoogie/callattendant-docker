@@ -28,7 +28,7 @@ jobs:
         id: check_version
         run: |
           TAG_NAME="${GITHUB_REF#refs/tags/}"  # Extract tag name from ref
-          if [[ "$TAG_NAME" == dev-* ]]; then
+          if [[ "$TAG_NAME" == *develop ]]; then
             echo "is_dev=true" >> $GITHUB_ENV
             echo "is_dev=true" >> $GITHUB_OUTPUT
             echo "Detected a development release: $TAG_NAME"
