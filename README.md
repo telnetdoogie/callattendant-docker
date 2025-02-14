@@ -12,12 +12,15 @@ It's important to mount this folder so that you don't lose your config and DB wh
 
 The container listens on port 5000. Choose any open port to map to the container. This container works well with reverse proxy setups, no additional config needed.
 
+Be sure to put in your correct Timezone in order for the dashboard to show the correct call times.
+
 ### Docker Run:
 
 ```
 docker run --rm -it --device=/dev/ttyACM0 \
     -v /volume1/docker/callattendant-docker/config:/app/config \
     -p 8088:5000 \
+    -e TZ='America/Chicago'
     telnetdoogie/callattendant-docker:latest
 ```
 
@@ -29,6 +32,8 @@ services:
   callattendant:
     container_name: callattendant
     image: telnetdoogie/callattendant-docker:latest
+    environment:
+        TZ: America/Chicago
     devices:
       - /dev/ttyACM0    # add your modem dev path here
     volumes:
