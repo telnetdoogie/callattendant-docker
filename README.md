@@ -1,6 +1,6 @@
 # **CallAttendant-Docker**
 
-This is a dockerized version of [@thess](https://github.com/thess)'s [CallAttendant](https://github.com/thess/callattendant/) that should run on any arm64 or amd64 docker host.
+This is a dockerized version of [@thess](https://github.com/thess)'s [CallAttendant](https://github.com/thess/callattendant/) that should run on any arm64, amd64, or arm7 docker host.
 
 You'll need to know which device is being used as your modem, and will need to add it to `--device` (docker run) or `devices:` (compose).
 
