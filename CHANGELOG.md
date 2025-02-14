@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.2.0...v1.3.0) (2025-02-14)
+
+
+### Features
+
+* Add armv7 version ([17b3f0d](https://github.com/telnetdoogie/callattendant-docker/commit/17b3f0d1efafa30b0a79a62eb7ac0d286f1b52eb))
+
+
+
 # [1.2.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.1.0...v1.2.0) (2025-01-10)
 
 
