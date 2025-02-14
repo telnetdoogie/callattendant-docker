@@ -27,12 +27,15 @@ jobs:
       - name: Check if this is a dev release
         id: check_version
         run: |
-          if [[ "${{ github.ref_name }}" == dev-* ]]; then
+          TAG_NAME="${GITHUB_REF#refs/tags/}"  # Extract tag name from ref
+          if [[ "$TAG_NAME" == dev-* ]]; then
             echo "is_dev=true" >> $GITHUB_ENV
-            echo "This is a development release"
+            echo "is_dev=true" >> $GITHUB_OUTPUT
+            echo "Detected a development release: $TAG_NAME"
           else
             echo "is_dev=false" >> $GITHUB_ENV
-            echo "This is a production release"
+            echo "is_dev=false" >> $GITHUB_OUTPUT
+            echo "Detected a production release: $TAG_NAME"
           fi
 
   build-prod:
