@@ -20,7 +20,7 @@ Be sure to put in your correct Timezone in order for the dashboard to show the c
 docker run --rm -it --device=/dev/ttyACM0 \
     -v /volume1/docker/callattendant-docker/config:/app/config \
     -p 8088:5000 \
-    -e TZ='America/Chicago'
+    -e TZ='America/Chicago' \
     telnetdoogie/callattendant-docker:latest
 ```
 
