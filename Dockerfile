@@ -6,8 +6,7 @@ RUN apk add --no-cache \
     git \
     gcc \
     musl-dev \
-    libxml2-dev \
-    libxslt-dev \
+    py3-lxml \
     python3-dev
 
 RUN pip install --no-cache-dir --prefix=/install callattendant@git+https://github.com/thess/callattendant@v2.1.0
