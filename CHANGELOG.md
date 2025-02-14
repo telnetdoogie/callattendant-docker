@@ -1,3 +1,12 @@
+## [1.4.1](https://github.com/telnetdoogie/callattendant-docker/compare/v1.4.0...v1.4.1) (2025-02-14)
+
+
+### Bug Fixes
+
+* Remove the need to compile lxml for armv7 ([a2fdbfe](https://github.com/telnetdoogie/callattendant-docker/commit/a2fdbfe425f8f691614fbab5e4a3ed235db1feb6))
+
+
+
 # [1.4.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.3.0...v1.4.0) (2025-02-14)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * renovate - stay up to date with thess version ([a77426c](https://github.com/telnetdoogie/callattendant-docker/commit/a77426c68c4b2b953d09b3d1a1ef8f382b1bede0))
-
-
-
-## [1.0.1](https://github.com/telnetdoogie/callattendant-docker/compare/v0.1.0...v1.0.1) (2024-12-31)
-
-
-### Bug Fixes
-
-* removed armv7 docker build ([e772efc](https://github.com/telnetdoogie/callattendant-docker/commit/e772efc28a80df1e138b091b6a64013ce785774b))
 
 
 
