@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - develop
+
 jobs:
   new-release:
     runs-on: ubuntu-latest
@@ -28,13 +28,6 @@ jobs:
           echo "Tag: ${{ steps.changelog.outputs.tag }}"
           echo "Clean Changelog: ${{ steps.changelog.outputs.clean_changelog }}"
           echo "Outputs Skipped: ${{ steps.changelog.outputs.skipped }}"
-
-      - name: Create Development Tag (if on develop)
-        if: github.ref == 'refs/heads/develop' && steps.changelog.outputs.skipped == 'false'
-        run: |
-          DEV_TAG="dev-${{ steps.changelog.outputs.tag }}"
-          git tag $DEV_TAG
-          git push origin $DEV_TAG
 
       - name: Create Production Release # This action will create the actual production release
         uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1

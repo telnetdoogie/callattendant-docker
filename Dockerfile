@@ -1,4 +1,4 @@
-FROM python:3.13.2-alpine3.21 as builder
+FROM python:3.13.2-alpine3.21 AS builder
 
 WORKDIR /app
 
@@ -8,7 +8,9 @@ RUN apk add --no-cache \
     musl-dev \
     libxml2-dev \
     libxslt-dev \
+    py3-lxml \
     python3-dev
+
 
 RUN pip install --no-cache-dir --prefix=/install callattendant@git+https://github.com/thess/callattendant@v2.1.0
 
