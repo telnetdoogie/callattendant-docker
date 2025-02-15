@@ -24,16 +24,29 @@ jobs:
     outputs:
       is_dev: ${{ steps.check_version.outputs.is_dev }}
     steps:
-      - name: Check if this is a dev release
+      - name: Extract branch or tag name and determine if it's a dev release
         id: check_version
         run: |
-          if [[ "${{ github.ref_name }}" == dev-* ]]; then
+          # Extract branch or tag name
+          if [[ "$GITHUB_REF" == refs/heads/* ]]; then
+            TAG_NAME="${GITHUB_REF#refs/heads/}"  # Extract branch name
+          elif [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            TAG_NAME="${GITHUB_REF#refs/tags/}"   # Extract tag name
+          else
+            TAG_NAME="$GITHUB_REF"  # Fallback (shouldn't happen)
+          fi
+          echo "Extracted TAG_NAME: $TAG_NAME"
+          # Check if TAG_NAME starts with "dev"
+          if [[ "$TAG_NAME" == dev* ]]; then
             echo "is_dev=true" >> $GITHUB_ENV
-            echo "This is a development release"
+            echo "is_dev=true" >> $GITHUB_OUTPUT
+            echo "Detected a development release: $TAG_NAME"
           else
             echo "is_dev=false" >> $GITHUB_ENV
-            echo "This is a production release"
+            echo "is_dev=false" >> $GITHUB_OUTPUT
+            echo "Detected a production release: $TAG_NAME"
           fi
+        shell: bash
 
   build-prod:
     needs: setup
@@ -117,7 +130,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:dev-${{ github.ref_name }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name == 'develop' && 'develop' || format('dev-{0}', github.ref_name) }}
 
       - name: Build and push Docker image (Production Release)
         id: build-and-push
@@ -128,7 +141,7 @@ jobs:
           provenance: true
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:dev-${{ github.ref_name }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name == 'develop' && 'develop' || format('dev-{0}', github.ref_name) }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:dev-latest
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
