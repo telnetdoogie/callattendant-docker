@@ -132,7 +132,7 @@ jobs:
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.ref_name == 'develop' && 'develop' || format('dev-{0}', github.ref_name) }}
 
-      - name: Build and push Docker image (Production Release)
+      - name: Build and push Docker image (Development Release)
         id: build-and-push
         uses: docker/build-push-action@0adf9959216b96bec444f325f1e493d4aa344497
         with:
