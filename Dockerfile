@@ -12,7 +12,7 @@ RUN apk add --no-cache \
     python3-dev
 
 RUN pip install --no-cache-dir --prefix=/install paho-mqtt
-RUN pip install --no-cache-dir --prefix=/install callattendant@git+https://github.com/thess/callattendant@v2.1.0
+RUN pip install --no-cache-dir --prefix=/install callattendant@git+https://github.com/thess/callattendant@v2.1.2
 
 FROM python:3.13.3-alpine3.21
 
