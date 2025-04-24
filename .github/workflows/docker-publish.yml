@@ -62,7 +62,7 @@ jobs:
         uses: actions/checkout@85e6279cec87321a52edac9c87bce653a07cf6c2
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@5a7ea16bc43404b0ee30fcc96778665e20456847
+        uses: docker/setup-qemu-action@737ba1e397ec2caff0d098f75e1136f9a926dc0a
 
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@941183f0a080fa6be59a9e3d3f4108c19a528204
@@ -112,7 +112,7 @@ jobs:
         uses: actions/checkout@85e6279cec87321a52edac9c87bce653a07cf6c2
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@5a7ea16bc43404b0ee30fcc96778665e20456847
+        uses: docker/setup-qemu-action@737ba1e397ec2caff0d098f75e1136f9a926dc0a
 
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@941183f0a080fa6be59a9e3d3f4108c19a528204
