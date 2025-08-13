@@ -59,7 +59,7 @@ jobs:
       attestations: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@05340d1c670183e7caabdb33ae9f1c80fae3b0c2
@@ -109,7 +109,7 @@ jobs:
       attestations: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@05340d1c670183e7caabdb33ae9f1c80fae3b0c2
