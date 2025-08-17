@@ -1,3 +1,12 @@
+# [1.10.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.9.0...v1.10.0) (2025-08-17)
+
+
+### Features
+
+* Update dependency thess/callattendant to v2.2.1 ([1354b80](https://github.com/telnetdoogie/callattendant-docker/commit/1354b8012e85826085ae86b849b08c479207ac0c))
+
+
+
 # [1.9.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.8.0...v1.9.0) (2025-08-08)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * add paho-mqtt to docker image ([b223cd2](https://github.com/telnetdoogie/callattendant-docker/commit/b223cd27e6115efc73c8003d0b103b845cb4b525))
-
-
-
-# [1.5.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.4.0...v1.5.0) (2025-02-15)
-
-
-### Features
-
-* added armv7 with automated dev build ([f228b29](https://github.com/telnetdoogie/callattendant-docker/commit/f228b29b0fc972a6e97c943a6bd289aec159b3b8))
 
 
 
