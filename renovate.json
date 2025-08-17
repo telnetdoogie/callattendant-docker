@@ -8,8 +8,8 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        "Dockerfile$"
+      "managerFilePatterns": [
+        "/Dockerfile$/"
       ],
       "matchStrings": [
         "RUN pip install --no-cache-dir --prefix=/install callattendant@git\\+https://github.com/thess/callattendant@(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)"
@@ -30,4 +30,3 @@
     }
   ]
 }
-
