@@ -1,4 +1,4 @@
-FROM python:3.13.7-alpine3.21 AS builder
+FROM python:3.14.0-alpine3.21 AS builder
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ RUN apk add --no-cache \
 RUN pip install --no-cache-dir --prefix=/install paho-mqtt
 RUN pip install --no-cache-dir --prefix=/install callattendant@git+https://github.com/thess/callattendant@v2.3.0
 
-FROM python:3.13.7-alpine3.21
+FROM python:3.14.0-alpine3.21
 
 COPY --from=builder /install /usr/local
 
