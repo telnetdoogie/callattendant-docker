@@ -20,13 +20,22 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": [
-        "github-releases"
-      ],
-      "matchDepNames": [
-        "thess/callattendant"
-      ],
-      "commitMessagePrefix": "feat:"
+      "matchDepNames": ["thess/callattendant"],
+      "matchDatasources": ["github-releases"],
+      "commitMessagePrefix": "feat:",
+      "automerge": false,
+      "groupName": null
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "groupName": "CI Dependencies"
+    },
+    {
+      "groupName": "CI Dependencies",
+      "matchUpdateTypes": ["patch", "digest"],
+      "automerge": true,
+      "automergeType": "pr"
     }
   ]
 }
