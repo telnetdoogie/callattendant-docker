@@ -62,13 +62,13 @@ jobs:
         uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@ce360397dd3f832beb865e1373c09c0e9f86d70a
+        uses: docker/setup-qemu-action@72cd56508471caa31aa98bca67440b2dc2f355c0
 
       - name: Setup Docker buildx
-        uses: docker/setup-buildx-action@28a438e9ed9ef7ae2ebd0bf839039005c9501312
+        uses: docker/setup-buildx-action@2ae358d897a79d8c08e086f833a3d537bc2dac22
 
       - name: Log into registry ${{ env.REGISTRY }}
-        uses: docker/login-action@b45d80f862d83dbcd57f89517bcf500b2ab88fb2
+        uses: docker/login-action@db14339dbc0a1f0b184157be94b23a2138122354
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -76,7 +76,7 @@ jobs:
 
       - name: Extract Docker metadata
         id: meta
-        uses: docker/metadata-action@6b695f7a8a3e9ce07613674750ee68840e5b6a1e
+        uses: docker/metadata-action@030e881283bb7a6894de51c315a6bfe6a94e05cf
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
@@ -86,7 +86,7 @@ jobs:
 
       - name: Build and push Docker image (Production Release)
         id: build-and-push
-        uses: docker/build-push-action@e25db879d025485a4eebd64fea9bb88a43632da6
+        uses: docker/build-push-action@d08e5c354a6adb9ed34480a06d141179aa583294
         with:
           context: .
           platforms: linux/amd64,linux/arm64,linux/arm/v7
@@ -112,13 +112,13 @@ jobs:
         uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@ce360397dd3f832beb865e1373c09c0e9f86d70a
+        uses: docker/setup-qemu-action@72cd56508471caa31aa98bca67440b2dc2f355c0
 
       - name: Setup Docker buildx
-        uses: docker/setup-buildx-action@28a438e9ed9ef7ae2ebd0bf839039005c9501312
+        uses: docker/setup-buildx-action@2ae358d897a79d8c08e086f833a3d537bc2dac22
 
       - name: Log into registry ${{ env.REGISTRY }}
-        uses: docker/login-action@b45d80f862d83dbcd57f89517bcf500b2ab88fb2
+        uses: docker/login-action@db14339dbc0a1f0b184157be94b23a2138122354
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -126,7 +126,7 @@ jobs:
 
       - name: Extract Docker metadata
         id: meta
-        uses: docker/metadata-action@6b695f7a8a3e9ce07613674750ee68840e5b6a1e
+        uses: docker/metadata-action@030e881283bb7a6894de51c315a6bfe6a94e05cf
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
@@ -134,7 +134,7 @@ jobs:
 
       - name: Build and push Docker image (Development Release)
         id: build-and-push
-        uses: docker/build-push-action@e25db879d025485a4eebd64fea9bb88a43632da6
+        uses: docker/build-push-action@d08e5c354a6adb9ed34480a06d141179aa583294
         with:
           context: .
           platforms: linux/amd64,linux/arm64,linux/arm/v7
