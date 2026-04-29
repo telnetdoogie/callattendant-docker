@@ -1,3 +1,12 @@
+# [1.14.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.13.0...v1.14.0) (2026-04-29)
+
+
+### Features
+
+* Update dependency thess/callattendant to v2.4.0 ([a1f878e](https://github.com/telnetdoogie/callattendant-docker/commit/a1f878ed16ffa133aa7b74262278a2e657bb0e86))
+
+
+
 # [1.13.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.12.0...v1.13.0) (2026-03-28)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * Update dependency thess/callattendant to v2.2.1 ([1354b80](https://github.com/telnetdoogie/callattendant-docker/commit/1354b8012e85826085ae86b849b08c479207ac0c))
-
-
-
-# [1.9.0](https://github.com/telnetdoogie/callattendant-docker/compare/v1.8.0...v1.9.0) (2025-08-08)
-
-
-### Features
-
-* **deps:** bump release for updated dependencies ([0b73f54](https://github.com/telnetdoogie/callattendant-docker/commit/0b73f54f6070ec09822288963706cacfa43e225f))
 
 
 
