@@ -30,7 +30,7 @@ jobs:
           echo "Outputs Skipped: ${{ steps.changelog.outputs.skipped }}"
 
       - name: Auto-Create Production Release
-        uses: softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda # v3 # auto create a tag and release
+        uses: softprops/action-gh-release@718ea10b132b3b2eba29c1007bb80653f286566b # v3 # auto create a tag and release
         if: github.ref == 'refs/heads/main' && steps.changelog.outputs.skipped == 'false'
         with:
           token: ${{ secrets.GH_TOKEN }}
